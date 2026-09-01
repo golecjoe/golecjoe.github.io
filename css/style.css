@@ -38,7 +38,7 @@ main {
 }
 
 .headshot {
-    flex: 0 0 250px;
+    flex: 0 0 200px;
 }
 
 .headshot img {
@@ -54,4 +54,18 @@ main {
 
 .bio h2 {
     margin-top: 0;
+}
+
+@media (max-width: 700px) {
+
+    .about {
+        flex-direction: column;
+    }
+
+    .headshot {
+        flex: none;
+        width: 200px;
+        margin: 0 auto;
+    }
+
 }
