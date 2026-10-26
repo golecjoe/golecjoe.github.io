@@ -52,8 +52,43 @@ main {
     flex: 1;
 }
 
+.headshot.slideshow {
+    flex-basis: 220px;
+}
+
+.headshot.home-headshot {
+    flex-basis: 288px;
+}
+
+.slideshow-images img {
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+    background: #f3f3f3;
+}
+
+.slideshow img[hidden] {
+    display: none;
+}
+
 .bio h2 {
     margin-top: 0;
+}
+
+.outreach-photo {
+    margin: 24px 0;
+}
+
+.outreach-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.outreach-photo figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #555;
 }
 
 @media (max-width: 700px) {
@@ -66,6 +101,18 @@ main {
         flex: none;
         width: 200px;
         margin: 0 auto;
+    }
+
+    .headshot.slideshow {
+        flex: none;
+        width: 220px;
+        max-width: 100%;
+    }
+
+    .headshot.home-headshot {
+        flex: none;
+        width: 288px;
+        max-width: 100%;
     }
 
 }
