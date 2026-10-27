@@ -52,8 +52,15 @@ main {
     flex: 1;
 }
 
-.headshot.slideshow {
-    flex-basis: 220px;
+.about-wrap {
+    display: flow-root;
+}
+
+.about-wrap .headshot.slideshow {
+    float: left;
+    width: 303.6px;
+    max-width: 100%;
+    margin: 0 40px 24px 0;
 }
 
 .headshot.home-headshot {
@@ -74,24 +81,56 @@ main {
     margin-top: 0;
 }
 
-.outreach-photo {
+.outreach-photo,
+.research-photo {
     margin: 24px 0;
 }
 
-.outreach-photo img {
+.outreach-photo img,
+.research-photo img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-.outreach-photo figcaption {
+.research-photo img + img {
+    margin-top: 24px;
+}
+
+.outreach-photo figcaption,
+.research-photo figcaption {
     margin-top: 8px;
     font-size: 0.9em;
     color: #555;
 }
 
+.research-imaging {
+    display: flow-root;
+}
+
+.research-photo-left {
+    float: left;
+    width: 46%;
+    margin: 0 24px 24px 0;
+}
+
+.research-beam-simulation {
+    width: 60%;
+}
+
 @media (max-width: 700px) {
+
+    .research-photo-left {
+        float: none;
+        width: 100%;
+        max-width: 414px;
+        margin-right: 0;
+    }
+
+    .research-beam-simulation {
+        max-width: 540px;
+    }
 
     .about {
         flex-direction: column;
@@ -103,10 +142,10 @@ main {
         margin: 0 auto;
     }
 
-    .headshot.slideshow {
+    .about-wrap .headshot.slideshow {
+        float: none;
         flex: none;
-        width: 220px;
-        max-width: 100%;
+        margin: 0 auto 24px;
     }
 
     .headshot.home-headshot {
