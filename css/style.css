@@ -1,3 +1,7 @@
+html {
+    background: #F5F7FB;
+}
+
 body {
     font-family: Arial, sans-serif;
     max-width: 900px;
@@ -5,29 +9,97 @@ body {
     padding: 40px 20px;
 
     line-height: 1.6;
-    color: #222;
+    color: #253448;
+    overflow-wrap: break-word;
 }
 
 header {
-    margin-bottom: 50px;
+    padding: 28px 32px;
+    background: #152640;
+    border-radius: 12px;
 }
 
-h1 {
-    margin-bottom: 10px;
+header h1 {
+    margin: 0 0 18px;
+    color: #fff;
+    line-height: 1.25;
 }
 
-nav a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #3366aa;
+a {
+    color: #3366AA;
+    text-underline-offset: 3px;
 }
 
-nav a:hover {
+a:hover {
     text-decoration: underline;
 }
 
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+}
+
+header nav a {
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #CAD8EA;
+    text-decoration: none;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+    background: #243B59;
+    color: #fff;
+}
+
+header nav a[aria-current="page"] {
+    background: #2B4565;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid #3366AA;
+    outline-offset: 3px;
+}
+
+header a:focus-visible {
+    outline-color: #CAD8EA;
+}
+
 main {
-    margin-top: 30px;
+    display: flow-root;
+    margin-top: 28px;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #E1E7EF;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(21, 38, 64, 0.05);
+}
+
+h2,
+h3 {
+    color: #152640;
+    line-height: 1.35;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    margin-top: 32px;
+    font-size: 1.15em;
+}
+
+main > h2:first-child {
+    margin-top: 0;
+}
+
+main > :last-child {
+    margin-bottom: 0;
 }
 
 .about {
@@ -50,6 +122,7 @@ main {
 
 .bio {
     flex: 1;
+    min-width: 0;
 }
 
 .about-wrap {
@@ -102,7 +175,7 @@ main {
 .research-photo figcaption {
     margin-top: 8px;
     font-size: 0.9em;
-    color: #555;
+    color: #526176;
 }
 
 .research-imaging {
@@ -120,6 +193,27 @@ main {
 }
 
 @media (max-width: 700px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    header {
+        padding: 24px 20px;
+    }
+
+    header h1 {
+        font-size: 1.65em;
+    }
+
+    header nav {
+        gap: 6px;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 24px 20px;
+    }
 
     .research-photo-left {
         float: none;
